@@ -1,0 +1,31 @@
+### Verbo GET – listar todos
+GET http://localhost:8000/produto/ HTTP/1.1
+
+### Verbo GET – listar um
+GET http://localhost:8000/produto/15 HTTP/1.1
+
+### Verbo POST – adicionar
+
+POST http://127.0.0.1:8000/produto/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Caneta Azul",
+    "descricao": "Caneta esferográfica azul",
+    "valor_unitario": 1.50
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/produto/20 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Caneta Azul BIC",
+    "descricao": "Caneta esferográfica azul BIC",
+    "valor_unitario": 2.00
+}
+
+### verbo Delete
+DELETE http://127.0.0.1:8000/produto/22 HTTP/1.1
+
+
