@@ -2,8 +2,10 @@ from fastapi import APIRouter, HTTPException, UploadFile, File
 from mod_produto.Produto import Produto
 import db
 from mod_produto.ProdutoModel import ProdutoDB
+from fastapi import Depends
+from security import get_current_active_user
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(get_current_active_user)])
 
 @router.get("/produto/", tags=["Produto"])
 def get_produto():
